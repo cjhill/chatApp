@@ -1,0 +1,16 @@
+<section id="home">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Most Recent Users</h3> <br>
+
+                <div class="list-group">
+                    <a href="{{ user._id }}" class="list-group-item" ng-repeat="user in allUsers">
+                        <h4 class="list-group-item-heading">{{ user.firstname + ' ' + user.lastname }}</h4>
+                        <p class="list-group-item-text">Joined: {{ user.createdAt | date: 'MM/dd/yyyy' }}</p>
+                    </a>
+                </div> <!-- .list-group -->
+            </div>
+        </div>
+    </div>
+</section>

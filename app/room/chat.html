@@ -1,0 +1,20 @@
+<section id="chat">
+    <div class="container-fluid">
+
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="message in allMessages track by $index">
+                <strong>{{ message.creator }}</strong>
+                <p>{{ message.body }}</p>
+            </li>
+        </ul>
+
+        <form ng-submit="sendMessage()">
+            <div class="form-group">
+                <input type="text" placeholder="Enter a message..." class="form-control" ng-model="message.body">
+            </div><!-- /.form-group -->
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">Send</button>
+            </div><!-- /.form-group -->
+        </form>
+    </div>
+</section><!-- /#chat -->

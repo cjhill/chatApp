@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="chatApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Chat App</title>
+
+    <link rel="stylesheet" href="app/libs/bootstrap/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="app/style.css">
+</head>
+<body class="cf">
+    <nav id="mainNav" class="mainContainers" ng-controller="AuthController">
+<!--         <div class="loggedInUser">
+            <h3>{{ loggedInUser[0].firstname + ' ' + loggedInUser[0].lastname }}</h3>
+        </div> -->
+        <div class="container-fluid">
+            <div class="cf">
+                <ul class="navLinks">
+                    <li ui-sref-active="active">
+                        <a ui-sref="home">Home</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="rooms">Rooms</a>
+                    </li>
+                    <li ui-sref-active="active" ng-show="loggedIn">
+                        <a ui-sref="profile">Profile</a>
+                    </li>
+                    <li ui-sref-active="active" ng-hide="loggedIn">
+                        <a ui-sref="signup">Sign Up</a>
+                    </li>
+                    <li>
+                        <p ng-click="logout()" ng-show="loggedIn">Logout</p>
+                    </li>
+                </ul>
+
+                <form class="navForm navbar-form" ng-submit="login()" ng-hide="loggedIn">
+                    <div class="form-group">
+                        <input type="text" placeholder="Email" class="form-control" ng-model="login.email">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" class="form-control" ng-model="login.password">
+                    </div>
+
+                    <button type="submit" class="btn btn-success">Sign in</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main id="mainContainer" class="mainContainers">
+        <ui-view></ui-view>
+    </main>
+
+    <!-- Libs -->
+    <script src="app/libs/angular/angular.js"></script>
+    <script src="app/libs/angular-ui-router/angular-ui-router.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script>
+        var socket = io();
+    </script>
+
+
+    <script src="app/app.js"></script>
+
+    <!-- Controllers -->
+    <script src="app/auth/auth.controller.js"></script>
+    <script src="app/home/home.controller.js"></script>
+    <script src="app/home/home.service.js"></script>
+    <script src="app/room/room.controller.js"></script>
+    <script src="app/room/chat.controller.js"></script>
+    <script src="app/profile/profile.controller.js"></script>
+</body>
+</html>

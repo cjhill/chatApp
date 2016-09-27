@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Base
+   ========================================================================== */
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    font-size: 100%;
+    line-height: 1.4;
+}
+
+body {
+    color: $lightGray;
+    background-color: $base;
+    font-size: 14px;
+    height: 100%;
+    font-family: $main-font;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    word-wrap: break-word;
+}
+
+/* =========================
+   CLEARFIX
+   ========================= */
+%clearfix {
+    &:before,
+    &:after {
+        content: ' ';
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+.cf {
+    @extend %clearfix;
+}

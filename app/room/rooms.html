@@ -1,0 +1,13 @@
+<section id="rooms">
+    <div class="container-fluid">
+        <h3>Rooms</h3> <br>
+
+        <div class="list-group">
+            <a ui-sref="chat({ id: room._id })" class="list-group-item" ng-repeat="room in allRooms">
+                <h4 class="list-group-item-heading">{{ room.name }}</h4>
+                <p class="list-group-item-text">Creator: {{ room.creator }}</p>
+                <p class="list-group-item-text">Joined: {{ room.createdAt | date: 'MM/dd/yyyy' }}</p>
+            </a>
+        </div> <!-- .list-group -->
+    </div><!-- /.container -->
+</section>

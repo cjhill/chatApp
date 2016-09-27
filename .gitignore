@@ -1,0 +1,17 @@
+# Mac Specific
+.DS_Store
+
+# Gulp
+node_modules
+dist
+*.node
+*.orig
+.idea
+gulp.1
+
+# SASS
+.sass-cache/
+*.css.map
+
+# Bower
+src/js/libs

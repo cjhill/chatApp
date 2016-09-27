@@ -1,0 +1,162 @@
+/* =========================
+   CONTAINERS
+   ========================= */
+
+.container,
+.container-fluid {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.container {
+    max-width: 970px;
+    width: 90%;
+
+    &.x-large {
+        max-width: 80%;
+    }
+
+    &.large {
+        max-width: 1022px;
+    }
+
+    &.small {
+        max-width: 886px;
+    }
+
+    &.x-small {
+        max-width: 748px;
+    }
+}
+
+/* =========================
+   SECTIONS
+   ========================= */
+
+section {
+    padding: 50px 0;
+}
+
+/* =========================
+   USEFUL
+   ========================= */
+
+.hide,
+.hidden {
+    display: none;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+// Form Placeholder Style
+.ie-placeholder {
+    font-size: 17px;
+    font-style: italic;
+    opacity: 0.5;
+}
+
+// Equal Heights Remove
+@include breakpoint('small') {
+    .equal > div:not('.item') {
+        height: auto !important;
+    }
+}
+
+/* =========================
+   WIDTHS
+   ========================= */
+
+.half {
+    @include row-machine (2, 0%);
+    float: left;
+
+    @include breakpoint('medium') {
+        @include row-machine(1, 0%);
+    }
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+.btn {
+    border-radius: 0;
+    font-weight: $bold;
+    color: $white;
+    display: inline-block;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* =========================
+   BACKGROUND
+   ========================= */
+
+.background-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* =========================
+   FLOATS
+   ========================= */
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+/* =========================
+   ANIMATION
+   ========================= */
+
+%animate {
+    transition-duration: 1.5s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+%scale {
+    transform: scale(1.07);
+}
+
+.fade-me {
+    @extend %animate;
+    opacity: 0;
+
+    &.left-fade {
+        transform: translate(-100px, 50px);
+    }
+
+    &.right-fade {
+        transform: translate(100px, 50px);
+    }
+
+    &.up-fade {
+        transform: translate(0, 50px);
+    }
+
+    &.slow-up-fade {
+        transform: translate(0, 100px);
+    }
+
+    &.is-showing {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}

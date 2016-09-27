@@ -1,0 +1,64 @@
+/* =========================
+   SIZES & LINE HEIGHTS
+   ========================= */
+
+p {
+    line-height: 1.5;
+
+    &:not(:last-of-type) {
+        margin: 0 0 20px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+h6 {
+    font-size: 12px;
+}
+
+/* =========================
+   STYLE
+   ========================= */
+
+strong {
+    font-weight: bold;
+}
+
+.caps {
+    text-transform: uppercase;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}

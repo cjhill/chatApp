@@ -1,0 +1,18 @@
+<section id="profile">
+    <div class="container-fluid">
+        <h2>Profile: {{ loggedInUser[0].firstname + ' ' + loggedInUser[0].lastname }}</h2>
+        <!-- <p>id: {{ loggedInUser[0]._id }}</p>
+        <p>email: {{ loggedInUser[0].email }}</p> -->
+
+        <br>
+        <form ng-submit="createRoom()">
+            <div class="form-group">
+                <input type="type" placeholder="Room Name" class="form-control" ng-model="room.name">
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Create</button>
+            </div>
+        </form>
+    </div>
+</section>

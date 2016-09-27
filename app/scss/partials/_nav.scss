@@ -1,0 +1,53 @@
+#mainNav {
+    background-color: $white;
+    border-bottom: 1px solid $gray;
+
+    .loggedInUser {
+        padding: 0 20px;
+    }
+
+    .navLinks {
+        float: left;
+
+        li {
+            display: inline-block;
+        }
+
+        a {
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+        }
+
+        a,p {
+            color: $lightGray;
+            font-weight: 500;
+            display: block;
+            padding: 20px;
+            font-size: 15px;
+        }
+    }
+
+    .navForm {
+        float: right;
+
+        input,
+        button {
+            height: 40px;
+        }
+
+        input,
+        input:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0px 1000px white inset;
+            color: $lightGray;
+            -webkit-text-fill-color: $lightGray !important;
+            border-radius: 0;
+            border: 1px solid $gray;
+        }
+
+        button {
+            background-color: $green;
+        }
+    }
+}

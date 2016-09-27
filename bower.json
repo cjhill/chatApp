@@ -1,0 +1,28 @@
+{
+  "name": "template",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "CWT Interactive"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "install" : {
+      "path" : "app/libs"
+  },
+  "dependencies": {
+      "angular": "latest",
+      "angular-route": "latest",
+      "angular-ui-router": "latest",
+      "bootstrap": "latest"
+  }
+}

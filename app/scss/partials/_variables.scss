@@ -1,0 +1,31 @@
+$base-font-size: 16px;
+$main-font: 'Roboto', sans-serif;
+
+/* =========================
+   COLORS
+   ========================= */
+
+$base: #eceff1;
+$white: #fff;
+$black: #000;
+$blue: #4285f4;
+$gray: #cfd8dc;
+$green: #08AF22;
+$lightGray: #607d8b;
+$darkGray: #455a64;
+
+/* =========================
+   TYPEOGRAPHY
+   ========================= */
+$bold: 700;
+
+/* =========================
+   BREAKPOINTS
+   ========================= */
+
+$breakpoints: (
+    'x-small' : 480,
+    'small' : 768,
+    'medium' : 992,
+    'large' : 1200
+);

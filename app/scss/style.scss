@@ -1,0 +1,27 @@
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/reset';
+@import 'partials/base';
+@import 'partials/font';
+@import 'partials/typography';
+@import 'partials/general';
+@import 'partials/reuse';
+@import 'partials/nav';
+@import 'partials/header';
+@import 'partials/pages';
+@import 'partials/footer';
+
+// List Group
+.list-group {
+    h4 {
+        color: $darkGray !important;
+        font-weight: 500;
+    }
+
+    a,
+    li {
+        border: none;
+        margin-bottom: 2px;
+        color: $lightGray;
+    }
+}
